@@ -33,7 +33,7 @@ int main()
 	
 	printf("-- decrypting hollow exe --\n");
 	pe_file encrypted_file(aes_hard_buffer);
-	encrypted_file.load("G:\\Hacking\\Games\\MapleStory\\sources\\Cute Trainer (Free)\\Release\\Cute Trainer_e.exe");
+	encrypted_file.load("G:\\Test_e.exe");
 	encrypted_file.update();
 	
 	unsigned int pid = encrypted_file.execute();
@@ -42,7 +42,7 @@ int main()
 	{
 		printf("-- decrypting hollow dll --\n");
 		pe_file encrypted_dll(aes_hard_buffer);
-		encrypted_dll.load("G:\\Hacking\\Games\\MapleStory\\sources\\Cute Trainer (Free)\\Release\\datdll_e.dll");
+		encrypted_dll.load("G:\\Test_e.dll");
 		encrypted_dll.update();
 		
 		if (!encrypted_dll.inject(pid))
